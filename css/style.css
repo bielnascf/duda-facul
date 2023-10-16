@@ -1,0 +1,279 @@
+body,html {
+    background-color: var(--brown-100);
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+header img {
+    display: block;
+    border-bottom: 4px solid var(--brown-300);
+    padding-bottom: 1.5rem;
+}
+
+header address {
+    text-align: right;
+    font-size: 1.5rem;
+    color: var(--brown-300);
+    opacity: .5;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: circle;
+    gap: 1.5rem;
+}
+
+main button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--brown-300);
+
+    transition: color .3s ease-in-out;
+}
+
+main button:hover {
+    color: #ffffff;
+}
+
+.apresentacao-imagem {
+    display: block;
+    width: 384px;
+}
+
+.cafeteiras {
+    display: none;
+}
+
+.cafeteiras h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--brown-300)
+}
+
+.cafeteiras ol {
+    background-color: #fdd6ae;
+    width: 24rem;
+    height: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 4rem;
+    list-style: upper-roman;
+    border: 4px solid var(--brown-300);
+
+    color: #d34d4d;
+}
+
+.cafeteiras ol button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    color: #d34d4db4;
+
+    transition: all .3s ease-in;
+}
+
+.cafeteiras ol button:hover {
+    color: var(--brown-300);
+}
+
+/* Modal Cafeteira */
+
+.modal-wrapper-cafeteiras.open, .modal-wrapper-capsulas.open, .modal-wrapper-pedidos.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper-cafeteiras, .modal-wrapper-capsulas, .modal-wrapper-pedidos {
+    position: absolute;
+    inset: 0;
+    background-color: #000000d2;
+
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-cafeteira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--brown-100);
+    text-align: center;
+    padding: 2rem;
+
+    color: #791b1b;
+}
+
+.modal-cafeteira .close-modal-cafeteiras {
+    padding: .3rem;
+    border: none;
+}
+
+.modal-cafeteira .close-modal-cafeteiras:hover {
+    background-color: #d8d8d8;
+}
+
+/* modal capsulas */
+
+table {
+    border-collapse: collapse;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+th, td, caption {
+    border: 1px solid #cfcfcf;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.capsulas {
+    cursor: pointer;
+
+    transition: background .3s ease-in-out;
+}
+
+.capsulas:hover {
+    background-color: #c09761;
+}
+
+thead th, caption {
+    background-color: #631919;
+}
+
+tbody th {
+    background-color: #a33333;
+}
+
+table td {
+    background-color: var(--brown-100);
+}
+
+table .descricao-tabela {
+    width: 221px;
+}
+
+table #imagem-vazia {
+    display: block;
+    margin: auto;
+}
+
+table .descricao-capsula {
+    width: 172px;
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--brown-300);
+}
+
+table .imagem-capsula {
+    margin: auto;
+    width: 140px;
+    height: 140px;
+}
+
+.modal-capsulas .close-modal-capsulas, .modal-pedidos .close-modal-pedidos {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 3.2rem;
+    right: 49vw;
+
+    transition: all .3s ease-in-out;
+}
+
+
+
+.modal-capsulas .close-modal-capsulas:hover, .modal-pedidos .close-modal-pedidos:hover {
+    transform: scale(1.1);
+}
+
+/* Modal pedidos */
+
+.modal-pedidos {
+    background-color: var(--brown-100);
+    padding: 1rem;
+    color: var(--brown-200);
+    font-size: .8rem;
+    border: 4px solid #701a1a;
+    outline: 4px solid #d17f03;
+
+    width: 35rem;
+}
+
+.modal-pedidos fieldset {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;  
+    gap: 1.5rem;  
+}
+
+.modal-pedidos .maquinas-form, .capsulas-form {
+    display: flex;
+    justify-content: space-between;
+    gap: .4rem;
+}
+
+.modal-pedidos .maquinas-form select, .capsulas-form select {
+    width: 312px;
+}
+
+.modal-pedidos #iquantidadeCapsulas {
+    width: 55px;
+}
+
+.modal-pedidos #ivalorUnitario, #ivalorTotal {
+    background-color: var(--white);
+    padding: 3px;
+    border: 1px solid #000000a1
+}
+
+.modal-pedidos textarea {
+    background-color: #ffffff;
+}
+
+.modal-pedidos .envio-form {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    padding-top: 1rem;
+}
+
+.modal-pedidos .envio-form .confirmar-form, .resetar-form {
+    padding: .3rem;
+    border: none;
+    cursor: pointer;
+
+    transition: background .3s ease-in-out;
+}
+
+.modal-pedidos .envio-form .confirmar-form:hover, .resetar-form:hover {
+    background-color: #c9c9c9;
+}

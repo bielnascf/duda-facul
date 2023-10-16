@@ -1,126 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>A Espuma era a Lei</title>
-    <style>
-        body {
-            background-color: #EEBB88;
-            font-family: "Lucida Bright", "Liberation", sans-serif;
-            color: #402020;
-            margin: 10px;
-            padding: 5px;
-            font-size: larger;
-        }
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        table.topo {
-            height: fit-content;
-        }
+    <title>Document</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/style.css">
 
-        table.topo img {
-            border-radius: 10px;
-        }
-
-        table {
-            width: 100%;
-            height: 800px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-            
-        }
-
-        th {
-            font-family: "Verdana", "Ubuntu", sans-serif;
-            
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            text-align: left;
-            list-style-type:circle;
-            font-size: x-large ;
-            padding-bottom: 350px;
-        }
-
-        
-
-        a {
-            font-weight: bolder;
-            color: #603030;
-        }
-
-        a:visited {
-            color: #603030;
-        }
-
-        a:hover {
-            color: #ffff;
-        }
-
-        address {
-            font-family: "Verdana", "Ubuntu", sans-serif;
-            text-align: right;
-            
-        }
-
-        img.logo {
-            display: block;
-            margin: 0 auto;
-            width: 350px;
-        }
-
-        hr {
-            border: none;
-            border-top: 4px solid #808080; /* Linha contínua */
-            margin: 0;
-            width: 320px;
-        }
-
-        p {
-            margin-bottom: 170px;
-        }
-
-
-    </style>
+    <script type="module" src="./js/main.js"></script>
 </head>
 <body>
-        <table class="topo">
-            <tr>
-                <td colspan="2">
-                    <img src="EspumaEraLeiTopo.png" alt="Espuma Era Lei" align="left" class="topo">
-                    <address>
-                        Endereço: Via Expressa, 126<br>
-                        Telefone:(21) 91122-3344<br>
-                        <u>contato@espumeralei.com.br</u>
-                    </address>
-                    <hr>
-                </td>
-            </tr>
-        </table>
+    <section class="container">
+        <header>
+            <img src="./assets/EspumaEraLeiTopo.png" alt="Logo do site">
+            <address>
+                Via Expressa <br>
+                Tel: (21) 91122-3344 <br>
+                <em>contato@espumaeralei.com.br</em>
+            </address>
+        </header>
+        <main>
+            <ul>
+                <li><button class="apresentacao">Apresentação</button>
+                <li><button class="cafeteira">Cafeteiras</button>
+                <li><button class="capsula">Cápsulas</button>
+                <li><button class="pedidos">Pedidos</button>
+            </ul>
+            <div class="content">
+                <img src="./assets/EspumaEraLei.png" alt="Imagem Logo do site" class="apresentacao-imagem">
+                <div class="cafeteiras">
+                    <h2>Cafeteiras</h2>
+                    <ol>
+                        <li><button>Mini ME</button></li>
+                        <li><button>Genio S Plus</button></li>
+                        <li><button>Inissia</button></li>
+                        <li><button>LOV</button></li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+        <div class="modal-wrapper-cafeteiras">
+            <div class="modal-cafeteira">
+                <h3 class="title">Cafeteira</h3>
+                <img src="./assets/cafeteira1.jpeg" alt="Imagem da cafeteira" class="imagem-cafeteira">
+                <p class="descricao-cafeteira">Cápsula: Dolce Gusto</p>
+                <p class="preco">Preço: R$ 530,00</p>
+                <button class="close-modal-cafeteiras">Fechar</button>
+            </div>
+        </div>
+        <div class="modal-wrapper-capsulas">
+            <div class="modal-capsulas">
+                <table>
+                    <caption>Cápsulas</caption>
+                    <thead>
+                        <tr>
+                            <th>Máquinas</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="2" scope="rowgroup">Dolce Gusto</th>
+                            <td class="capsulas">Espresso</td>
+                            <td rowspan="5" class="descricao-tabela">
+                                <img src="./assets/vazio.jpeg" alt="Imagem vazia" id="imagem-vazia">
+                                <div class="descricao-capsula">
+                                    <h3 class="nome-capsula">Cápsula</h3>
+                                    <img src="./assets/vazio.jpeg" alt="Imagem de uma cápsula" class="imagem-capsula">
+                                    <p class="quantidade-capsulas">QTD: 10</p>
+                                    <p class="preco-capsulas">Preço: R$ 20,00</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="capsulas">Intenso</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup">Três Corações</th>
+                            <td class="capsulas">Forza / Vibrante</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" scope="rowgroup">Nespresso</th>
+                            <td class="capsulas">Três Cor. Intenso</td>
+                        </tr>
+                        <tr>
+                            <td class="capsulas">Lor Forza</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="close-modal-capsulas">
+                    <i class="ph-bold ph-x-circle"></i>
+                </button>
+            </div>
+        </div>
+        <div class="modal-wrapper-pedidos">
+            <div class="modal-pedidos">
+                <form>
+                    <fieldset>
+                        <legend>Seleção de Produtos e Lista de Compras</legend>
 
-        <table>
-        <tr>
-            <td>
-                <ul>
-                    <li><a href="EspumaEraLei.html" target="_blank">Apresentação</a></li>
-                    
-                    <li><a href="Cafeteiras.html" target="_blank">Cafeteiras</a></li>
-                    
-                    <li><a href="Capsulas.html" target="_blank">Cápsulas</a></li>
-                    
-                    <li><a href="Pedidos.html" target="_blank">Pedidos</a></li>
-                </ul>
-            </td>
-            <td>
-                <img src="EspumaEraLei.png" alt="Espuma Era Lei"  class="logo">
-                    <p>para sua casa ter o melhor café expresso todo dia!</p>
-
-            </td>
-        </tr>
-    </table>
+                        <div class="maquinas-form">
+                            <label for="imaquinas">Máquinas</label>
+                            <select name="maquinas" id="imaquinas">]
+                                <datalist>
+                                    <option value="dolceGusto">Dolce Gusto</option>
+                                    <option value="tresCoracoes">Três Corações</option>
+                                    <option value="nespresso">Nespresso</option>
+                                </datalist>
+                            </select>
+                            <label for="iquantidadeMaquinas">Qtd:</label>
+                            <input type="number" name="quantidadeMaquinas" id="iquantidadeMaquinas" min="1" max="5">
+                            <button class="cofirmarItem-form">+</button>
+                        </div>
+                        <div class="capsulas-form">
+                            <label for="icapsulas">Cápsulas</label>
+                            <select name="capsulas" id="icapsulas">
+                                <datalist>
+                                    <option value="expresso">Expresso</option>
+                                    <option value="intenso">Intenso</option>
+                                    <option value="vibrante">Forza/Vibrante</option>
+                                    <option value="tresCoracoesIntenso">Três Cor. Intenso</option>
+                                    <option value="lorForza">Lor Forza</option>
+                                </datalist>
+                            </select>
+                            <label for="iquantidadeCapsulas">Qtd:</label>
+                            <input type="number" name="quantidadeCapsulas" id="iquantidadeCapsulas" min="1" max="30">
+                            <button class="confirmarItem-form">+</button>
+                        </div>
+                        <div class="valor-unitario">
+                            <label for="ivalorunitario">Valor X QTD: R$</label>
+                            <output name="valorUnitario" id="ivalorUnitario">0</output>
+                        </div>
+                        <textarea name="" id="" cols="40" rows="5" disabled></textarea>
+                        <div class="valor-total">
+                            <label for="ivalorTotal">Valor Total: R$</label>
+                            <output name="valorTotal" id="ivalorTotal">0</output>
+                        </div>
+                    </fieldset>
+                    <div class="envio-form">
+                        <input type="submit" value="Comprar" class="confirmar-form">
+                        <input type="reset" value="Limpar" class="resetar-form">
+                    </div>
+                </form>
+                <button class="close-modal-pedidos">
+                    <i class="ph-bold ph-x-circle"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

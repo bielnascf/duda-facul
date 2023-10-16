@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --brown-100: #EEBB88;
+    --brown-200: #603030;
+    --brown-300: #7e1919;
+    --white: #fff;
+    --black: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
