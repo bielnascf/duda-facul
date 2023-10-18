@@ -238,7 +238,7 @@ table .imagem-capsula {
 .modal-pedidos .maquinas-form, .capsulas-form {
     display: flex;
     justify-content: space-between;
-    gap: .4rem;
+    align-items: center;
 }
 
 .modal-pedidos .maquinas-form select, .capsulas-form select {
@@ -247,6 +247,10 @@ table .imagem-capsula {
 
 .modal-pedidos #iquantidadeCapsulas {
     width: 55px;
+}
+
+form button {
+    padding: 2px;
 }
 
 .modal-pedidos #ivalorUnitario, #ivalorTotal {

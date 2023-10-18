@@ -107,30 +107,41 @@
 
                         <div class="maquinas-form">
                             <label for="imaquinas">Máquinas</label>
-                            <select name="maquinas" id="imaquinas">]
-                                <datalist>
-                                    <option value="dolceGusto">Dolce Gusto</option>
-                                    <option value="tresCoracoes">Três Corações</option>
-                                    <option value="nespresso">Nespresso</option>
-                                </datalist>
+                            <select name="maquinas" id="imaquinas">
+                                <option value="vazio" disabled selected>----</option>
+                                <optgroup label="Dolce Gusto">
+                                    <option value="miniMe">Mini ME</option>
+                                    <option value="genioSPlus">Genio S Plus</option>
+                                </optgroup>
+                                <optgroup label="Nespresso">
+                                    <option value="inissia">Inissia</option>
+                                </optgroup>
+                                <optgroup label="Três Corações">
+                                    <option value="lov">LOV</option>
+                                </optgroup>
                             </select>
                             <label for="iquantidadeMaquinas">Qtd:</label>
-                            <input type="number" name="quantidadeMaquinas" id="iquantidadeMaquinas" min="1" max="5">
+                            <input type="number" name="quantidadeMaquinas" id="iquantidadeMaquinas" min="1" max="5" value="1">
                             <button class="cofirmarItem-form">+</button>
                         </div>
                         <div class="capsulas-form">
                             <label for="icapsulas">Cápsulas</label>
                             <select name="capsulas" id="icapsulas">
-                                <datalist>
-                                    <option value="expresso">Expresso</option>
-                                    <option value="intenso">Intenso</option>
-                                    <option value="vibrante">Forza/Vibrante</option>
-                                    <option value="tresCoracoesIntenso">Três Cor. Intenso</option>
+                                <option value="vazio" disabled selected>----</option>
+                                <optgroup label="Tipo Dolce Gusto">
+                                    <option value="dolceGustoEspresso">Dolce Gusto Espresso</option>
+                                    <option value="dolceGustoIntenso">Dolce Gusto Intenso</option>
+                                </optgroup>
+                                <optgroup label="Tipo Três Corações">
+                                    <option value="forcaVibrante">Força / Vibrante</option>
+                                </optgroup>
+                                <optgroup label="Tipo Nespresso">
+                                    <option value="tresCoracoesIntenso">Três Corações Intenso</option>
                                     <option value="lorForza">Lor Forza</option>
-                                </datalist>
+                                </optgroup>
                             </select>
                             <label for="iquantidadeCapsulas">Qtd:</label>
-                            <input type="number" name="quantidadeCapsulas" id="iquantidadeCapsulas" min="1" max="30">
+                            <input type="number" name="quantidadeCapsulas" id="iquantidadeCapsulas" min="1" max="30" value="1">
                             <button class="confirmarItem-form">+</button>
                         </div>
                         <div class="valor-unitario">

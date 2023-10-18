@@ -5,9 +5,7 @@ export const descricaoCapsula = document.querySelector('.descricao-capsula')
 const nomeCapsula = document.querySelector('.nome-capsula')
 const imagemCapsula = document.querySelector('.imagem-capsula')
 const quantidadeCapsula = document.querySelector('.quantidade-capsulas')
-console.log(quantidadeCapsula)
 const precoCapsula = document.querySelector('.preco-capsulas')
-console.log(precoCapsula)
 
 export const imagemVazia = document.getElementById('imagem-vazia')
 
